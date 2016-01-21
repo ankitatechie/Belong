@@ -1,0 +1,252 @@
+
+body{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	line-height: 1.6em;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: 400;
+	line-height: 1.6em;
+}
+h1{
+	margin: 0px;
+	font-weight: 300;
+	color: #fff;
+}
+h3{
+	opacity: 0.4;
+	color: #000;
+	margin-top: -10px;
+}
+section.biography, section.contact{
+	padding: 80px 0;
+}
+
+/* Navbar styling */
+.navbar-default{
+	background-color: transparent;
+	border: 0px;
+}
+.navbar-brand{
+	height: 60px;
+}
+.navbar-default:before{
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0,0,0,.7);
+}
+.navbar-brand>img{
+	width: 97px;
+	position: relative;
+	z-index: 9;
+}
+.navbar-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.navbar-default .navbar-nav>li>a{
+	color: #fff;
+	opacity: 0.6;
+}
+ .navbar-default .navbar-toggle .icon-bar{
+ 	background-color: #fff;
+	opacity: 0.6;
+ }
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+	color: #fff;
+	opacity: 1;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	background-color: inherit;
+	color: #fff;
+	opacity: 1;
+}
+.navbar-toggle{
+	margin-top: 15px;
+	border: 0px;
+	border-radius: 0px;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+	background-color: transparent;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover .icon-bar{
+	opacity: 1;
+}
+
+/* CSS for hexagon shapes http://i40.tinypic.com/kajqg.jpg */
+.img-show{
+	display: table;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	padding-top: 70px;
+}
+.img-show .inner{
+	display: table-cell;
+	vertical-align: middle;
+}
+.hexagon {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	color: #fff;
+	-webkit-mask-box-image: url('../images/hexagon.png');
+	text-align: center;
+	width: 17%;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    margin: 0 10px;
+}
+.hexagon .content{
+	display: block;
+	width: auto;
+	margin: auto;
+}
+.hexagon a {
+	cursor: -webkit-zoom-in; cursor: -moz-zoom-in;
+}
+ul{
+	padding: 0px;
+}
+ul.mrgnTop{
+	margin-top: -62px;
+}
+
+/* Biography section */
+section.biography{
+	background-color: #2EAF97;
+	color: #fff;
+}
+section.biography .inner{
+	display: table;
+	width: 100%;
+}
+section.biography .inner .inline{
+	display: table-cell;
+	vertical-align: middle;
+}
+section.biography .text{
+	padding-left: 30px;
+}
+section.biography p{
+	font-size: 16px;
+	line-height: 1.9em;
+	font-weight: 300;
+}
+.social-icons{
+	text-align: right;
+}
+.social-icons .fa{
+	font-size: 18px;
+	background-color: #fff;
+	width: 35px;
+	text-align: center;
+	color: #2EAF97;
+	padding: 8px;
+	opacity: 0.7;
+	cursor: pointer;
+	display: block;
+    float: left;
+}
+.social-icons .fa:hover{
+	opacity: 1;
+}
+
+/* Contact section */
+.contact{
+	background-color: #2F2F2F;
+}
+.contact form{
+	margin-top: 30px;
+}
+.form-group{
+	margin-bottom: 25px;
+}
+.form-control{
+	height: 50px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: 0;
+	border-radius: 0px;
+	font-size: 16px;
+	background-color: #4D4D4D;
+	background-image: none;
+	-webkit-transition: none;
+	transition: none;
+	-o-transition: none;
+	border: 0px;
+	font-weight: 300;
+	color: #fff !important;
+}
+.form-control:focus{
+	border: 1px solid #2EAF97;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.contact form .btn{
+	float: right;
+    border-radius: 0px;
+    width: 100px;
+    height: 45px;
+    background: #2EAF97;
+    color: #fff;
+    font-size: 16px;
+}
+.contact h3{
+	color: #fff;
+    font-weight: 300;
+    opacity: 0.6;
+}
+textarea.form-control{
+	height: 150px;
+}
+
+@media only screen and (max-width : 1120px){
+	ul.mrgnTop{
+		margin-top: -47px;
+	}
+}
+@media only screen and (max-width : 769px){
+	.img-show{
+		height: 60vh;
+	}
+	ul.mrgnTop{
+		margin-top: -40px;
+	}
+	.hexagon{
+		margin: 0 5px;
+	}
+	section.biography .inner .inline{
+		display: block;
+		text-align: center;
+	}
+	section.biography .hexagon{
+		width: 140px !important;
+		height: 140px !important;
+	}
+	section.biography .text{
+		padding: 0px;
+	}
+	.social-icons{
+		text-align: center;
+	}
+}
+@media only screen and (max-width : 480px){
+	.hexagon{
+		width: 16%;
+		margin: 0 2px;
+	}
+	ul.mrgnTop{
+		margin-top: -31px;
+	}
+}
+@media only screen and (max-width : 480px){
+
+}
+
+
