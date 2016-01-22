@@ -12,17 +12,19 @@ h1{
 	margin: 0px;
 	font-weight: 300;
 	color: #fff;
+	padding-left: 15px;
 }
 h3{
-	opacity: 0.4;
 	color: #000;
+	opacity: 0.4;
 	margin-top: -10px;
+	padding-left: 15px;
 }
-section.biography, section.contact{
-	padding: 80px 0;
+.biography, .contact{
+	padding: 100px 0;
 }
 
-/* Navbar styling */
+/* Navbar css starts */
 .navbar-default{
 	background-color: transparent;
 	border: 0px;
@@ -44,6 +46,14 @@ section.biography, section.contact{
 	width: 97px;
 	position: relative;
 	z-index: 9;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form, .navbar-nav{
+	text-align: center !important;
+	float: none;
+}
+.nav>li{
+	display: inline-block;
+	float: none;
 }
 .navbar-nav>li>a {
     padding-top: 20px;
@@ -77,8 +87,9 @@ section.biography, section.contact{
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover .icon-bar{
 	opacity: 1;
 }
+/* Navbar css ends */
 
-/* CSS for hexagon shapes http://i40.tinypic.com/kajqg.jpg */
+/* Hexagon image show css starts */
 .img-show{
 	display: table;
 	width: 100%;
@@ -110,30 +121,34 @@ section.biography, section.contact{
 .hexagon a {
 	cursor: -webkit-zoom-in; cursor: -moz-zoom-in;
 }
-ul{
+.img-show ul{
 	padding: 0px;
 }
-ul.mrgnTop{
+.img-show ul.mrgnTop{
 	margin-top: -62px;
 }
+/* Hexagon image show css ends */
 
-/* Biography section */
-section.biography{
-	background-color: #2EAF97;
+/* Biography section css starts */
+.biography{
+	background-color: #2eb398;
 	color: #fff;
 }
-section.biography .inner{
+.biography .inner{
 	display: table;
 	width: 100%;
 }
-section.biography .inner .inline{
+.biography .inner .inline{
 	display: table-cell;
 	vertical-align: middle;
 }
-section.biography .text{
+.biography .text{
 	padding-left: 30px;
 }
-section.biography p{
+.biography h1, .biography h3{
+	padding-left: 0px;
+}
+.biography p{
 	font-size: 16px;
 	line-height: 1.9em;
 	font-weight: 300;
@@ -142,9 +157,8 @@ section.biography p{
 	text-align: right;
 }
 .social-icons .fa{
-	font-size: 18px;
+	font-size: 17px;
 	background-color: #fff;
-	width: 35px;
 	text-align: center;
 	color: #2EAF97;
 	padding: 8px;
@@ -152,14 +166,31 @@ section.biography p{
 	cursor: pointer;
 	display: block;
     float: left;
+    transition:all 0.3s ease;
+    width: inherit;
 }
 .social-icons .fa:hover{
 	opacity: 1;
+	-webkit-transform: rotate(360deg);
+  	transform: rotate(360deg);
 }
+.social{
+	overflow: hidden;
+	color: #fff;
+	-webkit-mask-box-image: url('../images/hexagon.png');
+	text-align: center;
+	width: 30px;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    margin: 0 0px;
+    position: relative;
+	display: inline-block;
+}
+/* Biography section css ends */
 
-/* Contact section */
+/* Contact section css starts */
 .contact{
-	background-color: #2F2F2F;
+	background-color: #323232;
 }
 .contact form{
 	margin-top: 30px;
@@ -174,7 +205,7 @@ section.biography p{
 	outline: 0;
 	border-radius: 0px;
 	font-size: 16px;
-	background-color: #4D4D4D;
+	background-color: #474747;
 	background-image: none;
 	-webkit-transition: none;
 	transition: none;
@@ -196,6 +227,23 @@ section.biography p{
     background: #2EAF97;
     color: #fff;
     font-size: 16px;
+    -webkit-transition: -webkit-transform .1s ease,box-shadow .1s ease;
+    -moz-transition: -moz-transform .1s ease,box-shadow .1s ease;
+    -o-transition: -moz-transform .1s ease,box-shadow .1s ease;
+    transition: transform .1s ease,box-shadow .1s ease;
+}
+.contact form .btn:hover{
+	-webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px);
+    webkit-box-shadow: inset 0 -3px 0 rgba(0,0,0,.14),0 4px 9px rgba(0,0,0,.81);
+    -moz-box-shadow: inset 0 -3px 0 rgba(0,0,0,.14),0 4px 9px rgba(0,0,0,.81);
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,.14),0 4px 9px rgba(0,0,0,.81);
+}
+.contact form .btn:focus{
+	outline: none;
 }
 .contact h3{
 	color: #fff;
@@ -205,9 +253,49 @@ section.biography p{
 textarea.form-control{
 	height: 150px;
 }
+.contact .intro p{
+	margin: 25px 0 10px;
+	text-align: justify;
+    color: #fff;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 1.9em;
+    opacity: 0.7;
+}
+.contact .intro p span{
+	opacity: 1;
+}
+ul.contact-icons{
+	margin-top: 80px;
+}
+ul.contact-icons li{
+	margin-bottom: 10px;
+}
+.contact-icons .fa{
+	color: #2EAF97;
+	font-size: 20px;
+	width: 30px;
+}
+.contact-icons .text{
+	color: #fff;
+	opacity: 0.7;
+}
+/* Contact section css ends */
+
+/* Footer section */
+footer{
+	padding: 20px 30px;
+    background: #222222;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+footer span{
+	opacity: 0.4;
+}
 
 @media only screen and (max-width : 1120px){
-	ul.mrgnTop{
+	.img-show ul.mrgnTop{
 		margin-top: -47px;
 	}
 }
@@ -215,8 +303,8 @@ textarea.form-control{
 	.img-show{
 		height: 60vh;
 	}
-	ul.mrgnTop{
-		margin-top: -40px;
+	.img-show ul.mrgnTop{
+		margin-top: -39px;
 	}
 	.hexagon{
 		margin: 0 5px;
@@ -241,12 +329,22 @@ textarea.form-control{
 		width: 16%;
 		margin: 0 2px;
 	}
-	ul.mrgnTop{
-		margin-top: -31px;
+	.img-show ul.mrgnTop{
+		margin-top: -26px;
+	}
+	h1{
+		font-size: 30px;
+	}
+	h3{
+		font-size: 22px;
+		margin-top: -5px;
+	}
+	section.biography p{
+		line-height: 1.6em;
+		margin-bottom: 25px;
+	}
+	section.biography .inner .inline{
+		padding: 0 15px;
 	}
 }
-@media only screen and (max-width : 480px){
-
-}
-
 
