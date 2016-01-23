@@ -261,6 +261,27 @@ a:hover{
     -moz-transition: -moz-transform .1s ease,box-shadow .1s ease;
     -o-transition: -moz-transform .1s ease,box-shadow .1s ease;
     transition: transform .1s ease,box-shadow .1s ease;
+    position: relative;
+}
+.contact form .btn img{
+	width: 30px;
+	position: absolute;
+	width: 120px;
+    position: absolute;
+    top: -38px;
+    left: 23px;
+    display: none;
+}
+.contact h4{
+	text-align: left;
+    color: #20BB3C;
+    font-weight: 300;
+    font-size: 16px;
+    display: none;
+}
+.contact h4.error{
+	color: #B11F1F;
+	display: none;
 }
 .contact form .btn:hover{
 	opacity: 1;
@@ -376,6 +397,10 @@ footer span{
 	}
 	.contact form .btn{
 		float: none !important;
+	}
+	.contact h4{
+		text-align: center;
+		margin: -5px 0 0;
 	}
 	ul.contact-icons{
 		margin-top: 20px !important;
