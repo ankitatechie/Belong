@@ -173,7 +173,7 @@
           <h1>Get in touch</h1>
           <h3>Howdy! Say hello and drop your message.</h3>
           <div class="col-md-8 col-sm-12 col-xs-12">
-            <form class="" autocomplete="off">
+            <form data-async="" action="mail/contact_me.php" id="contactForm" method="post">
             <fieldset>
               <div class="form-group">
                 <input type="text" id="firstName" name="name" class="form-control" placeholder="Name" required="">
@@ -225,6 +225,7 @@
 <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="bower_components/wow/dist/wow.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script src="js/contact_me.js"></script>
 <script type="text/javascript">
   // Initialize wow.js
     new WOW().init();
