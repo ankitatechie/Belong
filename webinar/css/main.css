@@ -277,7 +277,9 @@ a:hover{
     color: #20BB3C;
     font-weight: 300;
     font-size: 16px;
-    display: none;
+}
+.contact h4.success{
+	display: none;
 }
 .contact h4.error{
 	color: #B11F1F;

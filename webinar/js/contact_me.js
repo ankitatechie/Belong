@@ -11,15 +11,14 @@ $(document).ready(function(){
             success: function(data, status) {
                 //clear all fields
                 $('#contactForm').trigger("reset");
-                $('.contact h4').show();
+                $('.contact h4.success').show();
             },
             error: function(data, status){
-                $('.error').show();
+                $('.contact h4.error').show();
             }
         });
         request.done(function() {
          $('.contact form .btn img').css('visibility', 'hidden');
-         // $('.success').show();
         });
         return false;
     });
