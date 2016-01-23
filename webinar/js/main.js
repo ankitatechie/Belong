@@ -30,4 +30,14 @@ $(document).ready(function() {
         $('.biography .inner').css({'padding-left':padding, 'padding-right':padding});
       }
    	}); 
+
+    // Navbar transitions
+    window.onscroll = function(){
+      if ($(this).scrollTop() > 100) {
+        $('.navbar-default').css('opacity','0.7');
+      }else{
+        $('.navbar-default').css('opacity','1');
+      }
+    }
+    
 });

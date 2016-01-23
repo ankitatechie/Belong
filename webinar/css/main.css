@@ -33,9 +33,12 @@ a:hover{
 
 /* Navbar css starts */
 .navbar-default{
-	
 	background-color: #000;
 	border: 0px;
+	transition: all 0.3 easeIn;
+	-webkit-transition: all 0.3 easeIn;
+	-moz-transition: all 0.3 easeIn;
+	-o-transition: all 0.3 easeIn;
 }
 .navbar-brand{
 	height: 60px;
@@ -64,6 +67,7 @@ a:hover{
 	float: none;
 	position: relative;
 	text-align: center;
+	width: 90px;
 }
 .navbar-nav>li>a {
     padding-top: 20px;
@@ -97,13 +101,16 @@ a:hover{
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover .icon-bar{
 	opacity: 1;
 }
+.navbar-default .navbar-nav>li.arrowParent>a{
+	opacity: 1;
+}
 .arrow{
-	width: 50px;
+	width: 75px;
     transform: rotate(180deg);
     position: absolute;
     top: 10px;
     right: 0;
-    left: -8px;
+    left: 3px;
 }
 /* Navbar css ends */
 
@@ -113,7 +120,7 @@ a:hover{
 	width: 100%;
 	height: 100vh;
 	text-align: center;
-	padding: 90px 0;
+	padding: 100px 0 80px;
 }
 .img-show .inner{
 	display: table-cell;
@@ -327,6 +334,16 @@ footer span{
 	}
 }
 @media only screen and (max-width : 769px){
+	.nav>li{
+		display: block;
+		width: 100%;
+	}
+	.navbar-default:before{
+		height: 55px;
+	}
+	.arrowParent{
+		display: none !important;
+	}
 	.biography, .contact{
 		padding: 50px 0;
 	}
