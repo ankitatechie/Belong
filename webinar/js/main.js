@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    
+
 
 	 // Calculate height and width of each hexagonal
   	var width = $('.content').width();
