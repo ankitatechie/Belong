@@ -143,9 +143,6 @@ a:hover{
 	width: auto;
 	margin: auto;
 }
-.hexagon a {
-	cursor: -webkit-zoom-in; cursor: -moz-zoom-in;
-}
 .img-show ul{
 	padding: 0px;
 }
